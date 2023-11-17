@@ -74,6 +74,7 @@ jobs:
         run: |
             git fetch --unshallow
             git checkout main && git checkout -
+            git checkout develop && git checkout -  
             git checkout feature && git checkout -
     
       - name: Checkout to branch
