@@ -7,8 +7,8 @@ on:
       - develop
   push:
     branches:
-      - main
       - develop
+      - main
 
 
 env:
