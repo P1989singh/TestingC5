@@ -53,7 +53,8 @@ jobs:
         run: echo Hello, world!
       - name: Read SIT file
         run: |
-          echo "devdata2=$(cat ./DB/sit.txt)" >> $GITHUB_ENV
+          cd repo/DB
+          echo "devdata2=$(cat ./DB/*.txt)" >> $GITHUB_ENV
           echo "SIT Information content: $devdata2"
       - name: Cache Text File
         uses: actions/cache@v2
@@ -75,7 +76,7 @@ jobs:
             git fetch --unshallow
             git checkout main && git checkout -
             git checkout develop && git checkout -  
-            git checkout feature && git checkout -
+            git checkout feature1 && git checkout -
     
       - name: Checkout to branch
         run: . ./.cicd/common/gitversion.sh checkout
