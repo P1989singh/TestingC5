@@ -51,12 +51,17 @@ jobs:
         uses: actions/checkout@v2
       - name: Run a one-line script
         run: echo Hello, world!
-      - name: Read SIT file
+      - name: SORT SIT Directory
         run: |
           cd ./DB
           ls -al
-          echo "devdata2=$(cat ./DB/*.txt)" >> $GITHUB_ENV
-          echo "SIT Information content: $devdata2"
+      - name: Fetch the latest file from the above directory
+        run: | 
+        for file in $(find DB -name '*.txt'); do
+          echo "Contents of $file:"
+		      cat "$file"
+		      echo "----------------------------------"
+		    done      
       - name: Cache Text File
         uses: actions/cache@v2
         with:
