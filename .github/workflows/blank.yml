@@ -52,7 +52,7 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
       - name: Read SIT file
-        run: |
+        run: | 
           cd TestingC5/DB
           echo "devdata2=$(cat ./DB/*.txt)" >> $GITHUB_ENV
           echo "SIT Information content: $devdata2"
