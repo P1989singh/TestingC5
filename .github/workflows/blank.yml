@@ -53,7 +53,8 @@ jobs:
         run: echo Hello, world!
       - name: Read SIT file
         run: |
-          cd TestingC5/DB
+          cd ./DB
+          ls -al
           echo "devdata2=$(cat ./DB/*.txt)" >> $GITHUB_ENV
           echo "SIT Information content: $devdata2"
       - name: Cache Text File
