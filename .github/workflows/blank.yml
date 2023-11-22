@@ -67,14 +67,10 @@ jobs:
         run: | 
           cd ./DB
           ls -al 
-      - name: Fetch the latest DIR
-        run: | 
-          for file in $(find DB -name '*.txt'); do
-            echo "Contents of $file:"
-		        cat "$file"
-		        echo "----------------------------------"
-		      done      
-      - name: Cache Text File
+      - name: Fetch the latest dir
+				run: | 
+          for file in $(find DB -name '*.txt'); do echo "Contents of $file: " cat "$file"echo "----------------------------------" done      
+      - name: Cache Text File 
         uses: actions/cache@v2
         with:
           path: | 
