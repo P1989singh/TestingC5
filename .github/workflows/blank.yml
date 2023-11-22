@@ -32,7 +32,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-      - name: Run a one-line script1
+      - name: Run a one-line script
         run: echo Hello, world!!
       - name: Read DEV file
         run: |
