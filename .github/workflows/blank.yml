@@ -71,9 +71,9 @@ jobs:
         run: | 
           for file in $(find DB -name '*.txt'); do
             echo "Contents of $file:"
-		        cat "$file"
-		        echo "----------------------------------"
-		      done      
+            cat "$file"
+            echo "----------------------------------"
+          done      
       - name: Cache Text File
         uses: actions/cache@v2
         with:
