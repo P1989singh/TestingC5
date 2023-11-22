@@ -44,12 +44,11 @@ jobs:
           echo "SIT Information content: $devdata1"
       - name: Read DIR latest files
         # write the logic for reading only the first latest script from directory
-        run: |
-        cd ./DB
-        ls -al
-        latest_files=$(ls -t "$DB" | head -n 5) 
+        run: | 
+          cd ./DB
+          latest_files=$(ls -t "$DB" | head -n 5) 
       - name: Read the latest files only
-        run : | 
+        run: | 
           for file in $latest_files; do
             echo " Contents of $file: "
             cat "$file"
