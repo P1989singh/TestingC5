@@ -51,11 +51,11 @@ jobs:
         uses: actions/checkout@v2
       - name: Run a one-line script
         run: echo Hello, world!
-      - name: SORT SIT Directory
+      - name: SORT SIT Directorys
         run: |
           cd ./DB
-          ls -al
-      - name: Fetch the latest file from the above directory
+          ls -al 
+      - name: Fetch the latest DIR
         run: | 
           for file in $(find DB -name '*.txt'); do
             echo "Contents of $file:"
