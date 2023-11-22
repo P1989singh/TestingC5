@@ -67,7 +67,7 @@ jobs:
         run: | 
           cd ./DB
           ls -al
-      - name: Fetch the latest DIR
+      - name: Fetch the latest DIR1
         run: | 
           for file in $(find DB -name '*.txt'); do
             echo "Contents of $file:"
