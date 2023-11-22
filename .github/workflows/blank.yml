@@ -54,14 +54,14 @@ jobs:
       - name: SORT SIT Directorys
         run: |
           cd ./DB
-          ls -al
-      - name: Fetch the latest file from the above directory
+          ls -al 
+      - name: Fetch the latest DIR
         run: | 
           for file in $(find DB -name '*.txt'); do
-            echo "Contents of $file:"
-		        cat "$file"
-		        echo "----------------------------------"
-		      done      
+            echo " Contents of $file: "
+            cat "$file"
+            echo "----------------------------------"
+          done      
       - name: Cache Text File
         uses: actions/cache@v2
         with:
