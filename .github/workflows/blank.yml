@@ -62,14 +62,18 @@ jobs:
       - name: Checkout Repositorys
         uses: actions/checkout@v2
       - name: Run a one-line script
-        run: echo Hello, world!
+        run:  echo Hello, world!
       - name: SORT SIT Directorys
-        run: | 
+        run: |
           cd ./DB
-          ls -al 
-      - name: Fetch the latest dir
-				run: | 
-          for file in $(find DB -name '*.txt'); do echo "Contents of $file: " cat "$file"echo "----------------------------------" done      
+          ls -al
+      - name: Fetch the latest DIR
+        run: | 
+          for file in $(find DB -name '*.txt'); do
+            echo " Contents of $file: "
+            cat "$file"
+            echo "----------------------------------"
+          done      
       - name: Cache Text File 
         uses: actions/cache@v2
         with:
