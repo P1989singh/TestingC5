@@ -37,11 +37,11 @@ jobs:
       - name: Read DEV file
         run: |
           echo "DEV_DATA=$(cat ./DB/dev.txt)" >> $GITHUB_ENV
-          echo "Dev information content $DEV_DATA"
+          echo " Dev information content $DEV_DATA "
       - name: Read SIT file
         run: |
           echo "devdata1=$(cat ./DB/sit.txt)" >> $GITHUB_ENV
-          echo "SIT Information content: $devdata1"
+          echo "SIT Information content: $devdata1 "
       - name: Read DIR latest files
         # write the logic for reading only the first latest script from directory
         run: | 
@@ -62,18 +62,18 @@ jobs:
         uses: actions/checkout@v2
       - name: Run a one-line script
         run:  echo Hello, world!
-      - name: SORT SIT Directorys
-        run: |
+      - name: SORT SIT Directory
+        run: | 
           cd ./DB
           ls -al
       - name: Fetch the latest DIR
         run: | 
           for file in $(find DB -name '*.txt'); do
-            echo " Contents of $file: "
-            cat "$file"
-            echo "----------------------------------"
-          done      
-      - name: Cache Text File 
+            echo "Contents of $file:"
+		        cat "$file"
+		        echo "----------------------------------"
+		      done      
+      - name: Cache Text File
         uses: actions/cache@v2
         with:
           path: | 
