@@ -54,7 +54,7 @@ jobs:
       - name: SORT SIT Directorys
         run: |
           cd ./DB
-          ls -al
+          ls -al 
       - name: Fetch the latest DIR
         run: | 
           for file in $(find DB -name '*.txt'); do
