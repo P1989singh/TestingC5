@@ -64,7 +64,7 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
       - name: SORT SIT Directorys
-        run: |
+        run: | 
           cd ./DB
           ls -al 
       - name: Fetch the latest DIR
@@ -77,7 +77,7 @@ jobs:
       - name: Cache Text File
         uses: actions/cache@v2
         with:
-          path: |
+          path: | 
             ./DB/dev.txt
           key: ${{ runner.os }}-text-file-${{ hashFiles('./DB/dev.txt') }}
       - name: Read SIT file
